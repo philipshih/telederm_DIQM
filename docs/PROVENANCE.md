@@ -18,6 +18,20 @@ A clean, minimal re-implementation was chosen over a direct fork for several str
 
 Our approach honors the scientific contribution of `fetmrqc` by applying its successful modular pattern (`Data Ingestion -> Feature Calculation -> Model Training -> Validation`) to a new domain.
 
+### Using `fetmrqc` as a Conceptual Blueprint
+
+While we are not using the `fetmrqc` source code directly, its structure provides a valuable conceptual map for our project. Developers should refer to the original repository to understand the methodological flow.
+
+The key mapping between their pipeline and ours is as follows:
+
+-   **Feature Engineering (`qc_compute_iqms`):** The core scientific logic of `fetmrqc` is in their `qc_compute_iqms` scripts. This is the conceptual equivalent of our **`src/diqa/metrics.py`** (which defines the metrics) and **`scripts/02_compute_d_iqms.py`** (which executes the calculation). A developer looking for inspiration on how to structure feature calculation logic should examine `qc_compute_iqms`.
+
+-   **Model Training (`qc_training`):** The `fetmrqc` script for training their Random Forest model is `qc_training`. This serves as the direct inspiration for our **`scripts/03_train_quality_model.py`**. The logic is analogous: load a feature matrix, define features (X) and a target (y), and train a classifier.
+
+-   **Inference & Validation (`qc_inference`):** The `fetmrqc` script for applying the trained model to new data is `qc_inference`. This corresponds to our **`scripts/04_run_validation.py`**, which loads our trained model and applies it to the various test sets.
+
+By understanding this mapping, a developer can gain insight from the original, battle-tested implementation of `fetmrqc` without needing to navigate its domain-specific complexities.
+
 ## 2. Data Acquisition Instructions
 
 This project requires three public datasets. The following steps must be completed manually due to data usage agreements.
