@@ -1,10 +1,10 @@
 # Teledermatology Image Quality Assessment (DIQA) Framework
 
-An interpretable, segmentation-free image quality control system for teledermatology using VLM knowledge distillation and FetMRQC methodology.
+Interpretable, segmentation-free image quality control system for teledermatology using VLM knowledge distillation and FetMRQC methodology.
 
 ## Overview
 
-We implement automated quality assessment for dermatologic images using:
+Automated quality assessment for dermatologic images using:
 - **16 segmentation-free D-IQM features**
 - **VLM knowledge distillation** from Gemini/GPT-4o/Claude
 - **Interpretable RandomForest models** (QA regression + QC classification)
@@ -12,7 +12,7 @@ We implement automated quality assessment for dermatologic images using:
 - **Baseline comparison and feature importance** 
 - **External dataset validation** (SCIN, ISIC, DDI)
 
-**Status**: FetMRQC requirements implemented. VLM annotation ongoing (40/500 images).
+VLM annotation ongoing (40/500 images).
 
 ## Quick Start
 
