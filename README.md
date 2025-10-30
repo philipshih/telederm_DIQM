@@ -4,13 +4,13 @@ An interpretable, segmentation-free image quality control system for teledermato
 
 ## Overview
 
-This project implements automated quality assessment for dermatologic images using:
+We implement automated quality assessment for dermatologic images using:
 - **16 segmentation-free D-IQM features**
 - **VLM knowledge distillation** from Gemini/GPT-4o/Claude
 - **Interpretable RandomForest models** (QA regression + QC classification)
-- **Leave-one-dataset-out cross-validation** (FetMRQC approach)
-- **Baseline comparisons and feature importance** 
-- **Multi-dataset validation** (SCIN, ISIC, DDI)
+- **Leave-one-dataset-out cross-validation**
+- **Baseline comparison and feature importance** 
+- **External dataset validation** (SCIN, ISIC, DDI)
 
 **Status**: FetMRQC requirements implemented. VLM annotation ongoing (40/500 images).
 
